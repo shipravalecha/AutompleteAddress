@@ -2,10 +2,7 @@
   <head>
     <title>Place Autocomplete Address Form</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,500"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script type="module" src="./index.js"></script>
@@ -44,10 +41,15 @@
         <span class="form-label">Country/Region*</span>
         <input id="country" name="country" required />
       </label>
-      <button type="button" class="my-button">Save address</button>
+      <button type="submit" class="my-button">Save address</button>
       <input type="reset" value="Clear form" />
     </form>
-
+    <script>
+      document.getElementById("address-form").onsubmit = function() {saveAddress()};
+      function saveAddress() {
+        alert("Address saved");
+      }
+    </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZHRMTg3lpAKUSGY_74opA3x8m6g1oni4&libraries=places&callback=initAutocomplete" async defer></script>
   </body>
 </html>
