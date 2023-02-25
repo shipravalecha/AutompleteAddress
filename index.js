@@ -9,7 +9,7 @@ function initAutocomplete() {
   postalField = document.querySelector("#postcode");
 
   autocomplete = new google.maps.places.Autocomplete(address1Field, {
-    componentRestrictions: { country: ["us", "ca"] },
+    componentRestrictions: { country: ["ca","us","af","aq","bd","br","cr","fr","gr","in","it","mu","sg","ch","ae","uk"]},
     fields: ["address_components", "geometry"],
     types: ["address"],
   });
